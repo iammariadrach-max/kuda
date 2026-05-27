@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+:root {
+  --mainFontSize: 1.6vw;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: cornflowerblue;
+  font-family: 'PT Root UI', Arial, Helvetica, sans-serif;
+  font-size: var(--mainFontSize);
+  padding: 1.6vw;
+  position: relative;
+}
+.image img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mainMenu {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6vw 2vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2vw;
+}
