@@ -5,26 +5,351 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kuda</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.139.0/build/three.module.js",
+          "OrbitControls": "https://unpkg.com/three@0.139.0/examples/jsm/controls/OrbitControls.js",
+          "GLTFLoader": "https://unpkg.com/three@0.139.0/examples/jsm/loaders/GLTFLoader.js",
+          "RectAreaLightUniformsLib": "https://unpkg.com/three@0.139.0/examples/jsm/lights/RectAreaLightUniformsLib.js"
+        }
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script type="module" src="javascripts/model.js"></script>
     <script defer src="javascripts/scripts.js"></script>
-    <script defer src="javascripts/index.js"></script>
   </head>
   <body>
-    <div class="image">
-      <img src="images/1 экран.svg" alt="" />
-    </div>
-    <div class="mainMenu">
-      <div class="about">
-        <p>О нас</p>
+    <section class="header">
+      <div class="top-text">
+        <div class="corner-letter">к</div>
+
+        <div class="top-scale">
+          <span class="koord1">
+            <span>90°W</span>
+            <span>60°W</span>
+          </span>
+          <span class="koord2">
+            <span>60°E</span>
+            <span>90°E</span>
+          </span>
+        </div>
+
+        <nav class="nav" aria-label="Главное меню">
+          <a href="index.html" class="active">О нас</a>
+          <a href="consultation.html">Консультация</a>
+          <a href="events.html">События</a>
+          <a href="shop.html">Магазин</a>
+        </nav>
+
+        <div class="corner-letter corner-letter--right">y</div>
       </div>
-      <div class="events">
-        <p>События</p>
+
+      <div class="side-scale side-scale--left">
+        <span class="koord3">
+          <span>90°W</span>
+          <span>75°W</span>
+        </span>
+        <span class="koord01">0°</span>
+        <span class="koord4">
+          <span>75°S</span>
+          <span>90°S</span>
+        </span>
       </div>
-      <div class="consultation">
-        <p>Консультация</p>
+      <div class="side-scale side-scale--right">
+        <span class="koord5">
+          <span>90°N</span>
+          <span>75°N</span>
+        </span>
+        <span class="koord02">0°</span>
+        <span class="koord6">
+          <span>75°S</span>
+          <span>90°S</span>
+        </span>
       </div>
-      <div class="trash">
-        <p>Корзина</p>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Путешествия<br />в вашем ритме</h1>
+
+          <p>
+            Мы создаём персональные маршруты под ваш характер, интересы и
+            настроение — не готовые туры, а путешествия именно для вас.
+          </p>
+
+          <a class="button1" href="404.html">Собрать маршрут</a>
+        </div>
+        <div class="canvas"></div>
+        <div class="bag-wrap">
+          <span class="bag-mark">?</span>
+        </div>
+
+        <div class="marker marker--one">01</div>
+        <div class="marker marker--two">02</div>
+
+        <img src="images/arrow1.svg" alt="стрелка" class="arrow arrow--left" />
+
+        <img src="images/arrow2.svg" alt="стрелка" class="arrow arrow--up" />
+
+        <p class="caption">
+          Куда? — туда, где маршрут<br />становится только вашим.
+        </p>
+      </section>
+
+      <div class="bottom-text">
+        <div class="corner-letter">д</div>
+        <div class="corner-letter corner-letter--right">а</div>
       </div>
-    </div>
+    </section>
+
+    <!-- 2 секция -->
+
+    <section class="second-section">
+      <div class="about-us">
+        <div class="image-and-progress-bar">
+          <div class="progress-bar">
+            <div class="progress-line">
+              <span></span>
+            </div>
+
+            <div class="progress-numbers">
+              <p class="progress-number progress-number--first">01/02</p>
+              <p class="progress-number progress-number--second">02/02</p>
+            </div>
+          </div>
+
+          <div class="plane-and-text">
+            <div class="stat-images">
+              <img
+                class="stat-image stat-image--first"
+                src="images/plane.svg"
+                alt="самолет"
+              />
+
+              <img
+                class="stat-image stat-image--second"
+                src="images/bag.svg"
+                alt="рекомендации клиентов"
+              />
+            </div>
+
+            <div class="stat-texts">
+              <div class="stat-text stat-text--first">
+                <h1>1 200+</h1>
+                <p>
+                  Персональных<br />
+                  маршрутов создано
+                </p>
+              </div>
+
+              <div class="stat-text stat-text--second">
+                <h1>96%</h1>
+                <p>
+                  Наших клиентов<br />
+                  рекомендуют «Куда?»
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-about-kuda">
+          <h1>
+            Мы не используем универсальные сценарии: каждое путешествие
+            создаётся вокруг ваших интересов, ритма, представления о комфорте и
+            желаемого настроения в поездке на каждом этапе маршрута.
+          </h1>
+
+          <h2>
+            Вы рассказываете, как хотите себя чувствовать, а мы подбираем
+            подходящее направление и формат.
+          </h2>
+
+          <div class="picture-and-text">
+            <img src="images/director.svg" alt="иконка директора" />
+
+            <p>Мария Драч, директор<br />бренда «Куда?»</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 секция -->
+
+    <main class="tariffs-screen">
+      <h1 class="page-title">Тарифы</h1>
+      <section class="tariffs">
+        <article class="tariff-card">
+          <div class="card-number">01</div>
+
+          <h2>Импульс</h2>
+          <p class="price">12 900 ₽</p>
+
+          <p class="description">
+            Для тех, кто хочет отправиться в&nbsp;путешествие, но все ещё<br />не
+            определился с направлением.
+          </p>
+          <ul class="features">
+            <li>
+              <img src="images/icon1.svg" alt="иконка1" class="icon1" /><span
+                >Персональная консультация</span
+              >
+            </li>
+            <li>
+              <img src="images/icon2.svg" alt="иконка2" class="icon2" /><span
+                >Подбор до трёх направлений</span
+              >
+            </li>
+            <li>
+              <img src="images/icon3.svg" alt="иконка3" class="icon3" /><span
+                >Сравнение стоимости и логистики</span
+              >
+            </li>
+            <li>
+              <img src="images/icon4.svg" alt="иконка4" class="icon4" /><span
+                >Рекомендации по сезону и&nbsp;длительности</span
+              >
+            </li>
+            <li>
+              <img src="images/icon5.svg" alt="иконка5" class="icon5" /><span
+                >Ориентировочный бюджет поездки</span
+              >
+            </li>
+          </ul>
+
+          <a class="button" href="404.html">Собрать маршрут</a>
+        </article>
+
+        <article class="tariff-card tariff-card-accent">
+          <div class="card-top">
+            <div class="card-number">02</div>
+            <div class="star">✦</div>
+          </div>
+          <h2>Маршрут</h2>
+          <p class="price">от 29 900 ₽</p>
+
+          <p class="description">
+            Для тех, кто уже готов путешествовать,<br />но не хочет
+            самостоятельно искать<br />места и составлять расписание.
+          </p>
+
+          <ul class="features">
+            <li>
+              <img src="images/icon6.svg" alt="иконка6" class="icon6" /><span
+                >Программа путешествия по дням</span
+              >
+            </li>
+            <li>
+              <img src="images/icon7.svg" alt="иконка7" class="icon7" /><span
+                >Подбор перелётов и проживания</span
+              >
+            </li>
+            <li>
+              <img src="images/icon8.svg" alt="иконка8" class="icon8" /><span
+                >Рестораны, события<br />и необычные места</span
+              >
+            </li>
+            <li>
+              <img src="images/icon9.svg" alt="иконка9" class="icon9" /><span
+                >Удобная логистика<br />и интерактивная карта</span
+              >
+            </li>
+            <li>
+              <img src="images/icon10.svg" alt="иконка10" class="icon10" /><span
+                >Цифровой путеводитель</span
+              >
+            </li>
+          </ul>
+          <a class="button button-dark" href="404.html">Собрать маршрут</a>
+        </article>
+
+        <article class="tariff-card">
+          <div class="card-number">03</div>
+
+          <h2>Путешествие</h2>
+          <p class="price">от 69 900 ₽</p>
+
+          <p class="description">
+            Для тех, кто хочет полностью<br />передать подготовку и организацию
+            путешествия нашей команде.
+          </p>
+
+          <ul class="features">
+            <li>
+              <img src="images/icon11.svg" alt="иконка11" class="icon11" /><span
+                >Готовый индивидуальный маршрут</span
+              >
+            </li>
+            <li>
+              <img src="images/icon12.svg" alt="иконка12" class="icon12" /><span
+                >Организация трансферов,<br />ресторанов и активностей</span
+              >
+            </li>
+            <li>
+              <img src="images/icon13.svg" alt="иконка13" class="icon13" /><span
+                >Все детали поездки под рукой</span
+              >
+            </li>
+            <li>
+              <img src="images/icon14.svg" alt="иконка14" class="icon14" /><span
+                >Бронирование под ключ</span
+              >
+            </li>
+            <li>
+              <img src="images/icon15.svg" alt="иконка15" class="icon15" /><span
+                >Поддержка на всех этапах</span
+              >
+            </li>
+          </ul>
+
+          <a class="button" href="404.html">Собрать маршрут</a>
+        </article>
+      </section>
+    </main>
+
+    <!-- 4 секция -->
+    <section class="footer">
+      <div class="footer-content">
+        <h2 class="footer-title">
+          Мы готовы создать путешествие,<br />
+          которое будет по-настоящему вашим.
+        </h2>
+
+        <nav class="footer-nav">
+          <div class="footer-nav-column">
+            <a href="404.html">О нас</a>
+            <a href="404.html">Тарифы</a>
+            <a href="404.html">Консультация</a>
+            <a href="404.html">События</a>
+            <a href="404.html">Магазин</a>
+          </div>
+
+          <div class="footer-nav-column">
+            <a href="404.html"
+              >Почта <img src="images/arrow01.svg" alt="стрелка"
+            /></a>
+            <a href="404.html"
+              >Telegram <img src="images/arrow02.svg" alt="стрелка"
+            /></a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-cloud-field">
+        <img class="footer-cloud" src="./images/cloud1.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud2.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud3.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud1.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud2.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud3.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud1.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud2.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud3.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud1.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud2.svg" alt="" />
+      </div>
+    </section>
   </body>
 </html>
