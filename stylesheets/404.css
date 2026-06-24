@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+.lost-body {
   background: #1594ed;
   color: #000;
   overflow: hidden;
