@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 56.25vw;
+}
+
+body {
+  background: #1594ed;
+  color: #000;
+  overflow: hidden;
+  font-family: 'Akzidenz-Grotesk Pro';
+  font-size: var(--mainFontSize);
+}
+
+.screen {
+  position: relative;
+  width: 100%;
+  height: 56.5vw;
+  background-image: url(../images/404background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: 700;
+}
+
+.corner-letter {
+  position: absolute;
+  font-family: 'PF Videotext Pro';
+  font-size: 4.6vw;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.corner-letter.left-top {
+  top: 0.5625vw;
+  left: 1.8vw;
+}
+
+.corner-letter.right-top {
+  top: 0.5625vw;
+  right: 1.5vw;
+}
+
+.corner-letter.left-bottom {
+  bottom: 1.18125vw;
+  left: 1.5vw;
+}
+
+.corner-letter.right-bottom {
+  bottom: 0.675vw;
+  right: 1.7vw;
+}
+
+.degree {
+  position: absolute;
+  font-size: 1.25vw;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.top-left-degree {
+  top: 1.2375vw;
+  left: 7.3vw;
+}
+
+.top-right-degree {
+  top: 1.2375vw;
+  right: 7.3vw;
+}
+
+.left-north {
+  top: 7.48125vw;
+  left: 1.2vw;
+}
+
+.right-north {
+  top: 7.48125vw;
+  right: 1.2vw;
+}
+
+.left-south {
+  bottom: 7.2vw;
+  left: 1.2vw;
+}
+
+.right-south {
+  bottom: 7.2vw;
+  right: 1.2vw;
+}
+
+.bottom-left-degree {
+  bottom: 1.18125vw;
+  left: 7.3vw;
+}
+
+.bottom-right-degree {
+  bottom: 1.18125vw;
+  right: 7.3vw;
+}
+
+.coords {
+  position: absolute;
+  top: 19.85625vw;
+  left: 15vw;
+  width: 70vw;
+  text-align: center;
+  font-family: 'PF Videotext Pro';
+  font-size: 7.9vw;
+  line-height: 0.95;
+  font-weight: 500;
+  letter-spacing: -0.45vw;
+  white-space: nowrap;
+}
+
+.coords span {
+  display: block;
+}
+
+.not-found {
+  position: absolute;
+  top: 34.875vw;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+  font-size: 1.25vw;
+  line-height: 1;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.message {
+  position: absolute;
+  left: 8.3vw;
+  bottom: 7.425vw;
+  font-size: 1.22vw;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.email {
+  position: absolute;
+  right: 8.4vw;
+  bottom: 7.48125vw;
+  font-size: 1.1vw;
+  line-height: 1;
+  font-weight: 400;
+}
