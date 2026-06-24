@@ -15,20 +15,20 @@ body {
   color: #000;
   overflow: hidden;
   font-family: 'Akzidenz-Grotesk Pro';
-  font-size: var(--mainFontSize);
+  font-size: 1.6vw;
 }
 
-.screen {
+.lost-page {
   position: relative;
-  width: 100%;
-  height: 56.5vw;
+  width: 100vw;
+  height: 56.25vw;
   background-image: url(../images/404background.svg);
-  background-size: cover;
+  background-size: 100vw 56.25vw;
   background-repeat: no-repeat;
   font-weight: 700;
 }
 
-.corner-letter {
+.lost-glyph {
   position: absolute;
   font-family: 'PF Videotext Pro';
   font-size: 4.6vw;
@@ -36,74 +36,74 @@ body {
   font-weight: 900;
 }
 
-.corner-letter.left-top {
+.lost-glyph--top-left {
   top: 0.5625vw;
   left: 1.8vw;
 }
 
-.corner-letter.right-top {
+.lost-glyph--top-right {
   top: 0.5625vw;
   right: 1.5vw;
 }
 
-.corner-letter.left-bottom {
+.lost-glyph--bottom-left {
   bottom: 1.18125vw;
   left: 1.5vw;
 }
 
-.corner-letter.right-bottom {
+.lost-glyph--bottom-right {
   bottom: 0.675vw;
   right: 1.7vw;
 }
 
-.degree {
+.lost-axis {
   position: absolute;
   font-size: 1.25vw;
   line-height: 1;
   font-weight: 700;
 }
 
-.top-left-degree {
+.lost-axis--top-left {
   top: 1.2375vw;
   left: 7.3vw;
 }
 
-.top-right-degree {
+.lost-axis--top-right {
   top: 1.2375vw;
   right: 7.3vw;
 }
 
-.left-north {
+.lost-axis--left-north {
   top: 7.48125vw;
   left: 1.2vw;
 }
 
-.right-north {
+.lost-axis--right-north {
   top: 7.48125vw;
   right: 1.2vw;
 }
 
-.left-south {
+.lost-axis--left-south {
   bottom: 7.2vw;
   left: 1.2vw;
 }
 
-.right-south {
+.lost-axis--right-south {
   bottom: 7.2vw;
   right: 1.2vw;
 }
 
-.bottom-left-degree {
+.lost-axis--bottom-left {
   bottom: 1.18125vw;
   left: 7.3vw;
 }
 
-.bottom-right-degree {
+.lost-axis--bottom-right {
   bottom: 1.18125vw;
   right: 7.3vw;
 }
 
-.coords {
+.lost-coordinates {
   position: absolute;
   top: 19.85625vw;
   left: 15vw;
@@ -117,11 +117,11 @@ body {
   white-space: nowrap;
 }
 
-.coords span {
+.lost-coordinates span {
   display: block;
 }
 
-.not-found {
+.lost-title {
   position: absolute;
   top: 34.875vw;
   left: 0;
@@ -133,7 +133,7 @@ body {
   white-space: nowrap;
 }
 
-.message {
+.lost-description {
   position: absolute;
   left: 8.3vw;
   bottom: 7.425vw;
@@ -142,7 +142,7 @@ body {
   font-weight: 400;
 }
 
-.email {
+.lost-mail {
   position: absolute;
   right: 8.4vw;
   bottom: 7.48125vw;
