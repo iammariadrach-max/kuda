@@ -142,19 +142,3 @@ body {
   line-height: 1;
   font-weight: 400;
 }
-
-html,
-body {
-  height: auto !important;
-  min-height: 100% !important;
-  overflow-y: auto !important;
-}
-
-.tariffs-screen,
-.consult-screen,
-.footer,
-.footer2,
-.events-header {
-  height: auto;
-  min-height: inherit;
-}
