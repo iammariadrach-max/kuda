@@ -4,12 +4,6 @@
   padding: 0;
 }
 
-html,
-body {
-  width: 100vw;
-  height: 56.25vw;
-}
-
 body {
   background: #1594ed;
   color: #000;
