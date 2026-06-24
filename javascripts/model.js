@@ -71,11 +71,11 @@ function initThree() {
 
       bag.position.sub(center)
 
-      const targetHeight = 18.1
+      const targetHeight = 17
       const scale = targetHeight / size.y
       bag.scale.setScalar(scale)
 
-      bag.position.y += 0.3
+      bag.position.y += 1.2
 
       bagGroup.add(bag)
 

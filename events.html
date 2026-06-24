@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>События</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+
+    <script defer src="javascripts/scripts.js"></script>
+  </head>
+  <body>
+    <section class="events-header">
+      <div class="top-text">
+        <div class="corner-letter">к</div>
+
+        <div class="top-scale">
+          <span class="koord1">
+            <span>90°W</span>
+            <span>60°W</span>
+          </span>
+          <span class="koord2">
+            <span>60°E</span>
+            <span>90°E</span>
+          </span>
+        </div>
+        <div class="event-bottom-coords">
+          <span class="event-koord1">
+            <span>90°W</span>
+            <span>60°W</span>
+          </span>
+          <span class="event-koord2">
+            <span>60°E</span>
+            <span>90°E</span>
+          </span>
+        </div>
+        <nav class="nav" aria-label="Главное меню">
+          <a href="index.html" class="active">О нас</a>
+          <a href="consultation.html">Консультация</a>
+          <a href="events.html">События</a>
+          <a href="shop.html">Магазин</a>
+        </nav>
+
+        <div class="corner-letter corner-letter--right">y</div>
+      </div>
+
+      <div class="side-scale side-scale--left">
+        <span class="koord3">
+          <span>90°W</span>
+        </span>
+
+        <span class="koord4">
+          <span>90°S</span>
+        </span>
+      </div>
+      <div class="side-scale side-scale--right">
+        <span class="koord5">
+          <span>90°N</span>
+        </span>
+
+        <span class="koord6">
+          <span>90°S</span>
+        </span>
+      </div>
+      <div class="event-bottom-text">
+        <div class="corner-letter">д</div>
+        <div class="corner-letter corner-letter--right">а</div>
+      </div>
+      <div class="main-text">
+        <h1>События</h1>
+        <p>
+          Помогают лучше почувствовать мир,<br />и найти своё следующее
+          направление.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2 секция -->
+    <section class="events" aria-label="События">
+      <article class="event" data-event="route" tabindex="0">
+        <div class="event__media" aria-hidden="true">
+          <img class="event__image" src="images/eventIcon1.svg" alt="иконка1" />
+        </div>
+        <div class="event__body">
+          <h2 class="event__title">10.07.26<br />Маршрут на вечер</h2>
+          <div class="event__content">
+            <p class="event__text">
+              Камерная встреча о том, как рождается персональное путешествие:
+              разбираем ритмы поездок, направления и путь от желания до
+              маршрута.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="event" data-event="diwali" tabindex="0">
+        <div class="event__media" aria-hidden="true">
+          <img class="event__image" src="images/eventIcon2.svg" alt="иконка2" />
+        </div>
+        <div class="event__body">
+          <h2 class="event__title">15.07.26<br />Праздник Дивали</h2>
+          <div class="event__content">
+            <p class="event__text">
+              Вечер о традициях Дивали, культуре Индии и маршрутах, которые
+              помогают увидеть страну через свет, цвет, вкус и праздник.
+            </p>
+            <a
+              class="event__button"
+              href="https://iammariadrach-max.github.io/RazvilkaPoster/"
+              >Посмотреть веб-плакат</a
+            >
+          </div>
+        </div>
+      </article>
+
+      <article class="event" data-event="history" tabindex="0">
+        <div class="event__media" aria-hidden="true">
+          <img class="event__image" src="images/eventIcon3.svg" alt="иконка3" />
+        </div>
+        <div class="event__body">
+          <h2 class="event__title">20.07.26<br />История путешествия</h2>
+          <div class="event__content">
+            <p class="event__text">
+              Лекция-история о маршруте через Индию, Египет и Китай: как
+              соединить разные культуры в одно продуманное путешествие.
+            </p>
+            <a class="event__button" href="https://clck.ru/3SqYCC"
+              >Посмотреть веб-плакат</a
+            >
+          </div>
+        </div>
+      </article>
+
+      <article class="event" data-event="home" tabindex="0">
+        <div class="event__media" aria-hidden="true">
+          <img class="event__image" src="images/eventIcon4.svg" alt="иконка4" />
+        </div>
+        <div class="event__body">
+          <h2 class="event__title">25.07.26<br />Дом «Куда?»</h2>
+          <div class="event__content">
+            <p class="event__text">
+              Экскурсия по главному зданию бренда: его истории, архитектуре и
+              месту, где начинаются будущие путешествия.
+            </p>
+            <a
+              class="event__button event__button--wide"
+              href="https://cdn1.flypdf.ru/user_57cc9398-6d32-4d84-b45d-a10a68fd18d4/3-modul-kniga1_d738fnpgf8uc73ffsk80/3-modul-kniga1.pdf"
+              >Почитать книгу о здании бренда</a
+            >
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 3 секция -->
+
+    <section class="signup" aria-label="Подписка на события">
+      <form class="signup__form" action="">
+        <h2 class="signup__title">Будьте в курсе событий</h2>
+
+        <div class="signup__row">
+          <label class="signup__field">
+            <span class="signup__label">Имя</span>
+            <input
+              class="signup__input"
+              type="text"
+              name="userName"
+              placeholder="Ваше имя"
+            />
+          </label>
+
+          <label class="signup__field">
+            <span class="signup__label">Email</span>
+            <input
+              class="signup__input"
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+            />
+          </label>
+
+          <button class="signup__button" type="submit">
+            Получать уведомления
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- 4 секция -->
+    <section class="footer3">
+      <div class="footer-content">
+        <h2 class="footer-title">
+          Мы готовы создать путешествие,<br />
+          которое будет по-настоящему вашим.
+        </h2>
+
+        <nav class="footer-nav">
+          <div class="footer-nav-column">
+            <a href="404.html">О нас</a>
+            <a href="404.html">Тарифы</a>
+            <a href="404.html">Консультация</a>
+            <a href="404.html">События</a>
+            <a href="404.html">Магазин</a>
+          </div>
+
+          <div class="footer-nav-column">
+            <a href="404.html"
+              >Почта <img src="images/arrow01.svg" alt="стрелка"
+            /></a>
+            <a href="404.html"
+              >Telegram <img src="images/arrow02.svg" alt="стрелка"
+            /></a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-cloud-field">
+        <img class="footer-cloud" src="./images/cloud1.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud2.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud3.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud1.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud2.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud3.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud1.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud2.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud3.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud1.svg" alt="" />
+        <img class="footer-cloud" src="./images/cloud2.svg" alt="" />
+      </div>
+    </section>
+  </body>
+</html>

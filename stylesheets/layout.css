@@ -88,6 +88,7 @@ a {
   display: flex;
   gap: 11.2vw;
 }
+
 .nav {
   position: absolute;
   top: 2.9vw;
@@ -172,11 +173,21 @@ a {
   color: #fff;
   font-size: 1.25vw;
   font-weight: 400;
+  transition:
+    transform 0.35s var(--ease),
+    background 0.35s var(--ease);
 }
 
+.button1:hover,
+.sign-up:focus-visible {
+  cursor: pointer;
+  transform: translateY(-0.18vw);
+  background: #f0eaf1;
+  color: #000;
+}
 .canvas {
   position: absolute;
-  top: 4.9vw;
+  top: 4.5vw;
   left: 47%;
   width: 38vw;
   height: 43vw;
@@ -188,7 +199,7 @@ a {
 
 .bag-wrap {
   position: absolute;
-  top: 4.9vw;
+  top: 4.5vw;
   left: 47%;
   width: 38vw;
   height: 43vw;
@@ -199,7 +210,7 @@ a {
 
 .bag-mark {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 57%;
   transform: translate(-50%, -50%);
   font-family: 'PF Videotext Pro';
@@ -601,6 +612,24 @@ h2 {
   line-height: 1;
   font-weight: 500;
   cursor: pointer;
+  transition:
+    transform 0.35s var(--ease),
+    background 0.35s var(--ease);
+}
+.button:hover,
+.button:focus-visible {
+  cursor: pointer;
+  transform: translateY(-0.18vw);
+  background: #000000;
+  color: #ffffff;
+}
+
+.button-dark:hover,
+.button-dark:focus-visible {
+  cursor: pointer;
+  transform: translateY(-0.18vw);
+  background: #ffffff;
+  color: #000;
 }
 
 .button-dark {
@@ -688,4 +717,879 @@ h2 {
   pointer-events: none;
   will-change: transform;
   transform: translate3d(0, 0, 0);
+}
+
+/* Экран консультации */
+
+.consult-screen {
+  width: 100%;
+  height: 82vw;
+  position: relative;
+  overflow: hidden;
+  padding: 1vw 6.1vw 3vw;
+  background-image: url(../images/consultationBackground.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.consult-map-letters {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.consult-map-letter {
+  position: absolute;
+  font-family: 'PF Videotext Pro';
+  font-size: 5vw;
+  font-weight: 400;
+  line-height: 0.8;
+  color: #000;
+}
+
+.consult-map-letter-k {
+  top: 1.25vw;
+  left: 1.5vw;
+}
+
+.consult-map-letter-u {
+  top: 1.25vw;
+  right: 1.6vw;
+}
+
+.consult-map-letter-d {
+  top: 51.2vw;
+  left: 1.35vw;
+}
+
+.consult-map-letter-a {
+  top: 51.5vw;
+  right: 1.45vw;
+}
+
+.consult-top {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.top-scale {
+  width: 84.5vw;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2vw;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.koord1,
+.koord2 {
+  display: flex;
+  gap: 11.2vw;
+}
+
+.nav2 {
+  position: absolute;
+  top: 2vw;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  transform: translateX(-50%);
+  font-size: 1.45vw;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+.consult-side {
+  position: absolute;
+  z-index: 2;
+  top: 7.35vw;
+  height: 41.8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.consult-side p {
+  margin: 0;
+  font-size: 1.2vw;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.consult-side-left {
+  left: 1.25vw;
+}
+
+.consult-side-right {
+  right: 1.25vw;
+  text-align: right;
+}
+
+.consult-title-block {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 11vw;
+  text-align: center;
+}
+
+.consult-title-block h1 {
+  margin: 0;
+  font-family: 'PF Videotext Pro';
+  font-size: 4.5vw;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.consult-title-block p {
+  margin: 1.3vw 0 0;
+  font-size: 1.3vw;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.consult-cards {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1vw;
+  margin-top: 6.5vw;
+}
+
+.consult-item {
+  width: calc(50% - 0.55vw);
+  height: 25.3vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.25vw 2.75vw;
+  border-radius: 2.35vw;
+  background-color: #df79ef;
+}
+
+.consult-icon {
+  position: absolute;
+  top: 2.45vw;
+  left: 2.75vw;
+  height: auto;
+}
+
+.consult-icon-search {
+  width: 8.7vw;
+}
+
+.consult-icon-compass {
+  width: 7.8vw;
+}
+
+.consult-icon-money {
+  width: 5.3vw;
+  top: 2.4vw;
+}
+
+.consult-icon-gear {
+  width: 7.6vw;
+}
+
+.consult-num {
+  position: absolute;
+  top: 2vw;
+  right: 2.2vw;
+  margin: 0;
+  font-size: 3.3vw;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.consult-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 38vw;
+}
+
+.consult-text h2 {
+  margin: 2vw 0 1.1vw;
+  font-size: 2vw;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.consult-text p {
+  margin: 0;
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.42;
+}
+
+/* подвал */
+
+.footer2 {
+  width: 100%;
+  height: 66vw;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../images/consultFooterBackground.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer-content2 {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  padding: 20vw 10vw 0;
+}
+.sign-up {
+  position: absolute;
+  top: 3vw;
+  left: 38.5vw;
+  padding: 1.5vw 3vw;
+  font-size: 1.25vw;
+  font-weight: 400;
+  height: 4.5vw;
+  border-radius: 3vw;
+  background-color: #000;
+  color: #ffffff;
+  border: 0;
+  cursor: pointer;
+  transition:
+    transform 0.35s var(--ease),
+    background 0.35s var(--ease);
+}
+
+.sign-up:hover,
+.sign-up:focus-visible {
+  cursor: pointer;
+  transform: translateY(-0.18vw);
+  background: #ffffff;
+  color: #000;
+}
+/* Экран событий */
+
+/* 1 секция */
+.events-header {
+  width: 100%;
+  height: 34.6vw;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../images/eventsBackground.svg);
+  background-size: cover;
+}
+/* body::after {
+  width: 100%;
+  height: 192vw;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/maket3.svg);
+  background-size: cover;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+} */
+.event-bottom-text {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 1.5vw;
+  position: relative;
+}
+.event-bottom-text {
+  bottom: -24.4vw;
+  align-items: flex-end;
+}
+.main-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-left: 38.5vw;
+  margin-top: 3.9vw;
+  text-align: center;
+  gap: 1.3vw;
+}
+.main-text h1 {
+  font-family: 'PF Videotext Pro';
+  font-size: 4.5vw;
+  font-weight: 400;
+  -webkit-text-stroke: #000;
+}
+.main-text p {
+  font-size: 1.3vw;
+  font-weight: 400;
+  line-height: 1.2;
+}
+/* 2 секция */
+
+:root {
+  --pink: #df79ef;
+  --black: #050505;
+  --white: #ffffff;
+  --muted: rgba(5, 5, 5, 0.34);
+  --line: rgba(255, 255, 255, 0.92);
+  --ease: cubic-bezier(0.2, 0.78, 0.18, 1);
+}
+.events {
+  position: relative;
+  width: 100vw;
+  min-height: 64vw;
+  overflow: hidden;
+  background:
+    linear-gradient(var(--line), var(--line)) 6.1vw 0 / 0.14vw 100% no-repeat,
+    linear-gradient(var(--line), var(--line)) 35.5vw 0 / 0.14vw 100% no-repeat,
+    linear-gradient(var(--line), var(--line)) calc(100% - 6.1vw) 0 / 0.14vw 100%
+      no-repeat,
+    var(--pink);
+  border-block: 0.14vw solid var(--line);
+}
+.event-bottom-coords {
+  position: absolute;
+  top: 32.5vw;
+  left: 7.3vw;
+  width: 85.4vw;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2vw;
+  font-weight: 700;
+  line-height: 1;
+}
+.event-koord1,
+.event-koord2 {
+  display: flex;
+  gap: 11.2vw;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+.event {
+  position: relative;
+  display: grid;
+  grid-template-columns: 35.5vw 64.5vw;
+  min-height: 13.25vw;
+  border-bottom: 0.14vw solid var(--line);
+  cursor: pointer;
+  outline: none;
+  transition:
+    min-height 0.62s var(--ease),
+    background 0.62s var(--ease);
+}
+
+.event:last-child {
+  border-bottom: 0;
+}
+
+.event:hover,
+.event:focus-within,
+.event.is-active {
+  min-height: 21.8vw;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.event__media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event__image {
+  width: 17.6vw;
+  height: 11.3vw;
+  object-fit: cover;
+  border-radius: 1.6vw;
+  opacity: 0;
+  transform: translateY(1.4vw) scale(0.92);
+  filter: blur(0.22vw);
+  transition:
+    opacity 0.5s var(--ease),
+    transform 0.5s var(--ease),
+    filter 0.5s var(--ease);
+  pointer-events: none;
+}
+
+.event:hover .event__image,
+.event:focus-within .event__image,
+.event.is-active .event__image {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.event__body {
+  padding: 2.35vw 10.2vw 2.35vw 4.15vw;
+  transition: padding 0.62s var(--ease);
+}
+
+.event:hover .event__body,
+.event:focus-within .event__body,
+.event.is-active .event__body {
+  padding-top: 4.2vw;
+}
+
+.event__title {
+  margin: 0;
+  max-width: 50vw;
+  color: var(--muted);
+  font-family: 'PF Videotext Pro';
+  font-size: 4.05vw;
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: 0;
+  transition:
+    color 0.45s var(--ease),
+    transform 0.45s var(--ease);
+}
+
+.event:hover .event__title,
+.event:focus-within .event__title,
+.event.is-active .event__title {
+  color: var(--black);
+  transform: translateY(-0.15vw);
+}
+
+.event__content {
+  max-width: 48vw;
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-0.85vw);
+  transition:
+    max-height 0.62s var(--ease),
+    margin-top 0.62s var(--ease),
+    opacity 0.45s var(--ease),
+    transform 0.45s var(--ease);
+}
+
+.event:hover .event__content,
+.event:focus-within .event__content,
+.event.is-active .event__content {
+  max-height: 13vw;
+  margin-top: 1.35vw;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.event__text {
+  margin: 0;
+  font-size: 1.25vw;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.event__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20.7vw;
+  min-height: 4vw;
+  margin-top: 2.25vw;
+  padding: 0.85vw 2.9vw;
+  border-radius: 4vw;
+  background: var(--black);
+  color: var(--white);
+  font-size: 1.15vw;
+  line-height: 1.15;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0;
+  transition:
+    transform 0.35s var(--ease),
+    background 0.35s var(--ease);
+}
+
+.event__button:hover,
+.event__button:focus-visible {
+  transform: translateY(-0.18vw);
+  background: #ffffff;
+  color: #000;
+}
+
+.event__button--wide {
+  min-width: 25.2vw;
+}
+
+/* 3 секция */
+
+.signup {
+  width: 100vw;
+  height: 26.9vw;
+  padding: 4.75vw 0;
+  background-image: url(../images/blueBackground2.svg);
+  background-size: cover;
+}
+
+.signup__form {
+  width: 87.8vw;
+  min-height: 17.35vw;
+  margin: 0 auto;
+  padding: 2.2vw 2.95vw 3.2vw;
+  border-radius: 2.35vw;
+  background: var(--white);
+}
+
+.signup__title {
+  margin: 0 0 2.75vw;
+  font-size: 2.85vw;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.signup__row {
+  display: grid;
+  grid-template-columns: 28.3vw 28.3vw 20.1vw;
+  gap: 2.75vw;
+  align-items: end;
+}
+
+.signup__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75vw;
+}
+
+.signup__label {
+  font-size: 1.15vw;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.signup__input {
+  width: 100%;
+  height: 4vw;
+  border: 0.14vw solid var(--black);
+  border-radius: 2.4vw;
+  padding: 0 2.25vw;
+  background: var(--white);
+  color: var(--black);
+  font-size: 1.15vw;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.signup__input::placeholder {
+  color: var(--black);
+  opacity: 1;
+}
+
+.signup__input:focus {
+  outline: 0.18vw solid var(--blue);
+  outline-offset: 0.18vw;
+}
+
+.signup__button {
+  width: 100%;
+  height: 4vw;
+  border: 0;
+  border-radius: 2.4vw;
+  background: var(--black);
+  color: var(--white);
+  font-size: 1.15vw;
+  line-height: 1;
+  letter-spacing: 0;
+  transition:
+    transform 0.35s var(--ease),
+    background 0.35s var(--ease);
+}
+
+.signup__button:hover,
+.signup__button:focus-visible {
+  cursor: pointer;
+  transform: translateY(-0.18vw);
+  background: #eb8ffc;
+  color: #000;
+}
+/* 4 секция */
+
+.footer3 {
+  width: 100%;
+  height: 57.4vw;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../images/footerBackground3.svg);
+  background-size: contain;
+}
+
+/* магазин */
+
+/* Экран магазина */
+
+.shop-head {
+  width: 100%;
+  height: 34.6vw;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../images/eventsBackground.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.shop-map-letter {
+  position: absolute;
+  font-family: 'PF Videotext Pro';
+  font-size: 5vw;
+  font-weight: 400;
+  line-height: 0.8;
+  color: #000;
+}
+
+.shop-map-letter-k {
+  top: 1vw;
+  left: 1.7vw;
+}
+
+.shop-map-letter-y {
+  top: 0.8vw;
+  right: 1.6vw;
+}
+
+.shop-map-letter-d {
+  bottom: 1.2vw;
+  left: 1.7vw;
+}
+
+.shop-map-letter-a {
+  bottom: 1.2vw;
+  right: 1.7vw;
+}
+
+.shop-top-coords,
+.shop-bottom-coords {
+  position: absolute;
+  left: 7.3vw;
+  width: 85.4vw;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2vw;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.shop-top-coords {
+  top: 1.2vw;
+}
+
+.shop-bottom-coords {
+  bottom: 1.25vw;
+}
+
+.shop-nav {
+  position: absolute;
+  top: 2.9vw;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5vw;
+  font-size: 1.45vw;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.shop-side-coord {
+  position: absolute;
+  top: 7.4vw;
+  height: 19.7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.2vw;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.shop-side-coord p {
+  margin: 0;
+}
+
+.shop-side-coord-left {
+  left: 1.25vw;
+}
+
+.shop-side-coord-right {
+  right: 1.25vw;
+  text-align: right;
+}
+
+.shop-title {
+  position: absolute;
+  top: 13vw;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.shop-title h1 {
+  margin: 0;
+  font-family: 'PF Videotext Pro';
+  font-size: 4.5vw;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.shop-title p {
+  margin: 0.8vw 0 0;
+  font-size: 1.3vw;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.shop-products {
+  width: 100%;
+  height: 41.3vw;
+  padding: 5.6vw 6.2vw 5.45vw;
+  display: flex;
+  gap: 2.1vw;
+  background-image: url(../images/shopBackground.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.shop-gallery {
+  width: 60vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1vw;
+}
+
+.shop-card {
+  width: 19.25vw;
+  height: 14.35vw;
+  padding: 0;
+  overflow: hidden;
+  border: 0.18vw solid transparent;
+  border-radius: 1.7vw;
+  background: #008cff;
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.shop-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.shop-card:hover {
+  transform: translateY(-0.2vw);
+}
+
+.shop-card.is-active {
+  border-color: #fff;
+}
+
+.shop-info {
+  width: 25vw;
+  padding-top: 0.1vw;
+  color: #000;
+}
+
+.shop-info-title {
+  margin: 0;
+  font-size: 2.55vw;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.shop-info-text {
+  margin: 1.35vw 0 0;
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.shop-info-price {
+  margin: 1.85vw 0 0;
+  font-size: 2vw;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.shop-buy {
+  width: 13.8vw;
+  height: 3.7vw;
+  margin-top: 1.45vw;
+  border-radius: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+  font-size: 1.25vw;
+  font-weight: 400;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.shop-buy:hover {
+  transform: translateY(-0.18vw);
+  background: #ffffff;
+  color: #000;
+}
+
+/* подвал */
+
+.footer4 {
+  width: 100%;
+  height: 57.4vw;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../images/shopFooterBackground.svg);
+  background-size: contain;
+}
+
+/* изменение цвета ссылок по наведению */
+
+.nav a[href],
+.nav2 a[href],
+.shop-nav a[href],
+.footer-nav a[href] {
+  color: #000000;
+  transition: color 0.2s ease;
+  text-underline-offset: 0.2vw;
+}
+
+.nav a[href]:hover,
+.nav2 a[href]:hover,
+.shop-nav a[href]:hover,
+.footer-nav a[href]:hover {
+  color: #ffffff;
+}
+
+.button1:hover,
+.button1:focus-visible {
+  cursor: pointer;
+  transform: translateY(-0.18vw);
+  background: #f0eaf1;
+  color: #000000;
+}
+
+.event__button:hover,
+.event__button:focus-visible,
+.shop-buy:hover,
+.shop-buy:focus-visible {
+  transform: translateY(-0.18vw);
+  background: #ffffff;
+  color: #000000;
 }

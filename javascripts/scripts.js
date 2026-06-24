@@ -233,3 +233,103 @@
 
   requestAnimationFrame(loop)
 })()
+
+// События
+
+const events = document.querySelectorAll('.event')
+
+function setActive(activeEvent) {
+  events.forEach((event) => {
+    event.classList.toggle('is-active', event === activeEvent)
+  })
+}
+
+function clearActive() {
+  events.forEach((event) => {
+    event.classList.remove('is-active')
+  })
+}
+
+events.forEach((event) => {
+  event.addEventListener('pointerenter', () => setActive(event))
+  event.addEventListener('pointermove', () => setActive(event))
+  event.addEventListener('pointerleave', clearActive)
+  event.addEventListener('mouseover', () => setActive(event))
+  event.addEventListener('mouseenter', () => setActive(event))
+  event.addEventListener('mouseleave', clearActive)
+  event.addEventListener('click', () => setActive(event))
+  event.addEventListener('focusin', () => setActive(event))
+  event.addEventListener('focusout', clearActive)
+})
+
+// форма
+
+function formModalWindow() {
+  let form = document.querySelector('form')
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault()
+
+    let userName = form.userName.value
+
+    if (userName == '') {
+      alert(`Спасибо, неизвестный пользователь! Данные сохранены.`)
+    } else {
+      alert(`Спасибо, ${userName}! Данные сохранены.`)
+    }
+  })
+}
+
+// магазин
+
+const shopProducts = [
+  {
+    title: 'Антистресс<br>«Мягкая&nbsp;посадка»',
+    text: 'Мягкий антистресс для перелётов, ожидания у\u00A0гейта и\u00A0долгих пересадок. Помогает занять руки, расслабиться и\u00A0сделать дорогу немного спокойнее.',
+    price: '490\u00A0₽'
+  },
+  {
+    title: 'Чехол для<br>чемодана «В&nbsp;путь»',
+    text: 'Мягкий чехол, который защищает чемодан от\u00A0царапин и\u00A0делает его заметным на\u00A0багажной ленте. Лёгкий способ добавить путешествию цвета ещё до\u00A0вылета.',
+    price: '3\u00A0990\u00A0₽'
+  },
+  {
+    title: 'Тревел-аптечка<br>«На&nbsp;всякий случай»',
+    text: 'Компактный набор для дороги, который удобно взять в\u00A0ручную кладь или чемодан. Всё необходимое собрано в\u00A0одном месте, чтобы чувствовать себя увереннее в\u00A0поездке.',
+    price: '2\u00A0490\u00A0₽'
+  },
+  {
+    title: 'Связка брелков<br>«Всегда рядом»',
+    text: 'Набор небольших travel-брелков для ключей, сумки или рюкзака. В\u00A0комплекте — кабель-брелок, который выручит в\u00A0дороге, когда зарядка нужна прямо сейчас.',
+    price: '1\u00A0990\u00A0₽'
+  },
+  {
+    title: 'Обложка на&nbsp;паспорт<br>«Моё куда»',
+    text: 'Обложка для паспорта с\u00A0фирменной графикой бренда. Защищает документ в\u00A0дороге и\u00A0превращает главный travel-аксессуар в\u00A0часть личного маршрута.',
+    price: '1\u00A0790\u00A0₽'
+  },
+  {
+    title: 'Welcome-kit<br>«Перед взлётом»',
+    text: 'Набор для комфортного начала путешествия: арома-спрей, беруши, зубная щётка и\u00A0паста, крем для рук. Всё, что помогает выдохнуть и\u00A0настроиться на\u00A0дорогу.',
+    price: '1\u00A0790\u00A0₽'
+  }
+]
+
+const shopCards = document.querySelectorAll('.shop-card')
+const shopTitle = document.querySelector('.shop-info-title')
+const shopText = document.querySelector('.shop-info-text')
+const shopPrice = document.querySelector('.shop-info-price')
+
+shopCards.forEach((card) => {
+  card.addEventListener('click', () => {
+    const productIndex = Number(card.dataset.product)
+    const product = shopProducts[productIndex]
+
+    shopCards.forEach((item) => item.classList.remove('is-active'))
+    card.classList.add('is-active')
+
+    shopTitle.innerHTML = product.title
+    shopText.textContent = product.text
+    shopPrice.textContent = product.price
+  })
+})
