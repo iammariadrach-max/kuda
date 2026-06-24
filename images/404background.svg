@@ -2,6 +2,7 @@
 <g clip-path="url(#clip0_262_5315)">
 <rect width="1440" height="814" fill="#008CFF"/>
 <rect width="1440" height="814" transform="matrix(1 0 0 -1 0 814)" fill="url(#pattern0_262_5315)"/>
+<rect width="1440" height="814" transform="matrix(1 0 0 -1 0 814)" fill="url(#paint0_linear_262_5315)"/>
 <path d="M88.0015 1L88 813.5" stroke="white" stroke-width="1.71032"/>
 <path d="M1352.01 1L1352 814" stroke="white" stroke-width="1.71032"/>
 <path d="M1440 88H0.000488281" stroke="white" stroke-width="1.71032"/>
@@ -19,6 +20,10 @@
 <pattern id="pattern0_262_5315" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_262_5315" transform="matrix(0.000738925 0 0 0.00130719 -0.00523005 0)"/>
 </pattern>
+<linearGradient id="paint0_linear_262_5315" x1="720" y1="0" x2="703.5" y2="998.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB8FFC" stop-opacity="0"/>
+<stop offset="1" stop-color="#EB8FFC"/>
+</linearGradient>
 <clipPath id="clip0_262_5315">
 <rect width="1440" height="814" fill="white"/>
 </clipPath>
