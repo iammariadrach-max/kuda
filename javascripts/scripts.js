@@ -333,3 +333,44 @@ shopCards.forEach((card) => {
     shopPrice.textContent = product.price
   })
 })
+// меню
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuButton = document.querySelector('.mobile-menu-toggle')
+  const menu = document.querySelector('.mobile-menu')
+  const overlay = document.querySelector('.mobile-menu-overlay')
+  const closeButton = document.querySelector('.mobile-menu-close')
+  const menuLinks = document.querySelectorAll('.mobile-menu-nav a')
+
+  if (!menuButton || !menu || !overlay || !closeButton) return
+
+  function openMenu() {
+    menu.classList.add('is-open')
+    overlay.classList.add('is-open')
+    document.body.classList.add('mobile-menu-lock')
+    menuButton.setAttribute('aria-expanded', 'true')
+    menu.setAttribute('aria-hidden', 'false')
+  }
+
+  function closeMenu() {
+    menu.classList.remove('is-open')
+    overlay.classList.remove('is-open')
+    document.body.classList.remove('mobile-menu-lock')
+    menuButton.setAttribute('aria-expanded', 'false')
+    menu.setAttribute('aria-hidden', 'true')
+  }
+
+  menuButton.addEventListener('click', openMenu)
+  closeButton.addEventListener('click', closeMenu)
+  overlay.addEventListener('click', closeMenu)
+
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', closeMenu)
+  })
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu()
+    }
+  })
+})
