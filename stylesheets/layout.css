@@ -15,19 +15,7 @@ body {
   font-size: var(--mainFontSize);
   position: relative;
 }
-/* body::after {
-  width: 100%;
-  height: 221vw;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url(../images/maket.svg);
-  background-size: cover;
-  opacity: 0.1;
-  pointer-events: none;
-  z-index: 0;
-} */
+
 .header {
   z-index: 1;
 }
