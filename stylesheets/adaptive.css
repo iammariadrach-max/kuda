@@ -1,0 +1,902 @@
+* {
+  box-sizing: border-box;
+}
+.mobile-menu-toggle,
+.mobile-menu-overlay,
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 430px) {
+  :root {
+    --mainFontSize: 3.72vw;
+  }
+
+  body.mobile-menu-lock {
+    overflow: hidden;
+  }
+  /* body::after {
+    width: 100%;
+    height: 1183vw;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/adaptivemaket.svg);
+    background-size: cover;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 1;
+  } */
+  .nav,
+  .nav2,
+  .shop-nav,
+  .top-scale,
+  .side-scale,
+  .consult-side,
+  .shop-side-coord,
+  .shop-top-coords,
+  .shop-bottom-coords,
+  .event-bottom-coords {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    position: fixed;
+    top: 22vw;
+    right: 2.5vw;
+    z-index: 1000002;
+    display: flex;
+    width: 10vw;
+    height: 10vw;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+    border: 0.55vw solid #000;
+    border-radius: 50%;
+    background: #fff;
+  }
+
+  .mobile-menu-toggle span {
+    width: 4.7vw;
+    height: 0.35vw;
+    background: #000;
+    border-radius: 10vw;
+  }
+
+  .mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: block;
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-menu-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000002;
+    display: block;
+    width: 74vw;
+    height: 100dvh;
+    padding: 18vw 7vw;
+    background: #df79ef;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+  }
+
+  .mobile-menu.is-open {
+    transform: translateX(0);
+  }
+
+  .mobile-menu-close {
+    position: absolute;
+    top: 4vw;
+    right: 5vw;
+    border: 0;
+    background: none;
+    color: #000;
+    font-size: 11vw;
+    line-height: 1;
+  }
+
+  .mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+  }
+
+  .mobile-menu-nav a {
+    color: #000;
+    font-size: 6vw;
+    font-weight: 700;
+    line-height: 1.1;
+    text-decoration: none;
+  }
+
+  .header {
+    height: 220vw;
+    background-image: url(../images/adaptive1backround.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .top-text {
+    padding: 2.5vw 1.5vw 0;
+  }
+
+  .bottom-text {
+    position: absolute;
+    left: 0;
+    bottom: 2.5vw;
+    width: 100%;
+    padding: 0 1.5vw;
+  }
+
+  .corner-letter,
+  .consult-map-letter,
+  .shop-map-letter {
+    font-size: 14vw;
+    line-height: 0.8;
+  }
+  .corner-letter {
+    padding-left: 2vw;
+  }
+
+  .hero {
+    top: 52vw;
+    height: 88vw;
+  }
+
+  .hero-copy {
+    top: 73vw;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-copy h1 {
+    margin: 0 0 2.2vw;
+    font-size: 6vw;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .hero-copy p,
+  .caption,
+  .arrow {
+    display: none;
+  }
+
+  .button1 {
+    width: 64vw;
+    min-height: 14.2vw;
+    border-radius: 20vw;
+    font-size: 4.8vw;
+  }
+
+  .canvas,
+  .bag-wrap {
+    top: -7vw;
+    left: 44%;
+    width: 110vw;
+    height: 90vw;
+  }
+
+  .bag-mark {
+    top: 46%;
+    left: 57%;
+    font-size: 25vw;
+  }
+
+  .marker {
+    width: 9vw;
+    height: 9vw;
+    border-width: 0.35vw;
+    font-size: 5.5vw;
+  }
+
+  .marker--one {
+    top: -45vw;
+    left: 19vw;
+    bottom: auto;
+  }
+
+  .marker--two {
+    right: 19.2vw;
+    bottom: -45.5vw;
+    top: auto;
+  }
+
+  .second-section {
+    height: 275vw;
+    background-color: #df79ef;
+    background-image: none;
+  }
+
+  .about-us {
+    flex-direction: column;
+    padding: 23vw 3.9vw 59vw;
+  }
+
+  .text-about-kuda {
+    order: 1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .text-about-kuda h1,
+  .text-about-kuda h2 {
+    font-size: 6.5vw;
+    line-height: 1.12;
+  }
+
+  .text-about-kuda h2 {
+    margin-top: 5vw;
+  }
+
+  .picture-and-text {
+    margin-top: 12vw;
+    gap: 2vw;
+    font-size: 5vw;
+  }
+
+  .picture-and-text img {
+    width: 11.5vw;
+  }
+
+  .image-and-progress-bar {
+    order: 2;
+    width: 100%;
+    margin-top: 8vw;
+  }
+
+  .progress-bar {
+    gap: 2vw;
+    margin-bottom: 5vw;
+  }
+
+  .progress-line {
+    height: 0.35vw;
+    margin-top: 1.7vw;
+  }
+
+  .progress-numbers {
+    width: 11vw;
+    height: 4vw;
+  }
+
+  .progress-number {
+    font-size: 4vw;
+  }
+
+  .stat-images {
+    width: 100%;
+    height: 25vw;
+  }
+
+  .stat-image {
+    left: 50%;
+    width: 72vw;
+    height: 46vw;
+    transform: translateX(-50%);
+  }
+
+  .stat-texts {
+    min-height: 20vw;
+  }
+
+  .stat-text h1 {
+    font-size: 14vw;
+    padding-top: 22.5vw;
+  }
+
+  .stat-text p {
+    font-size: 6vw;
+  }
+
+  .tariffs-screen {
+    height: 464vw;
+    padding: 13vw 4.5vw 8vw;
+    background-image: none;
+  }
+
+  .page-title {
+    margin: 0 0 8vw;
+    font-size: 10vw;
+  }
+
+  .tariffs {
+    width: 100%;
+    flex-direction: column;
+    gap: 11vw;
+  }
+
+  .tariff-card,
+  .tariff-card-accent {
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 7vw;
+    border-radius: 5vw;
+  }
+
+  .card-number {
+    width: 7vw;
+    height: 7vw;
+    border-width: 0.35vw;
+    font-size: 4.9vw;
+  }
+  .tariff-card h2 {
+    margin: 0.6vw 0 1.4vw;
+  }
+  .star {
+    font-size: 9vw;
+  }
+
+  .tariff-card h2,
+  .tariff-card-accent h2 {
+    margin-top: 3vw;
+    font-size: 6vw;
+  }
+
+  .price {
+    font-size: 10vw;
+  }
+
+  .description {
+    min-height: 0;
+    margin: 2vw 0 3vw;
+    padding-bottom: 5vw;
+    font-size: 4.3vw;
+    line-height: 1.1;
+  }
+
+  .features {
+    gap: 2.9vw;
+  }
+
+  .features li {
+    gap: 2vw;
+    font-size: 4.2vw;
+  }
+
+  .icon1,
+  .icon2,
+  .icon3,
+  .icon4,
+  .icon5,
+  .icon6,
+  .icon7,
+  .icon8,
+  .icon9,
+  .icon10,
+  .icon11,
+  .icon12,
+  .icon13,
+  .icon14,
+  .icon15 {
+    width: 5.3vw;
+  }
+
+  .button,
+  .button-dark {
+    width: 75vw;
+    height: 11vw;
+    margin-top: 6vw;
+    font-size: 3.7vw;
+  }
+
+  .footer,
+  .footer3 {
+    height: 225vw;
+    background-image: url(../images/adaptiveFooterBackground.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .footer2 {
+    height: 243vw;
+    background-image: url(../images/adaptiveConsultationFooterBackground2.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .footer-content,
+  .footer-content2 {
+    display: block;
+    padding: 39vw 4vw 0;
+  }
+
+  .footer-title {
+    max-width: 88vw;
+    font-size: 7vw;
+    line-height: 1.25;
+  }
+
+  .footer-nav {
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    padding-top: 9vw;
+  }
+
+  .footer-nav-column {
+    gap: 1vw;
+  }
+
+  .footer-nav a {
+    font-size: 5.9vw;
+  }
+
+  .footer-nav img {
+    width: 3vw;
+  }
+
+  .footer-cloud-field {
+    left: 2vw;
+    right: 2vw;
+    bottom: 11vw;
+    height: 200vw;
+  }
+
+  .footer-cloud {
+    width: 40vw;
+  }
+
+  .consult-screen {
+    min-height: 365vw;
+    padding: 0 3.7vw 8vw;
+    background-image: url(../images/adaptiveConsultationBackground.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  /* body::after {
+    width: 100%;
+    height: 600vw;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/adaptiveMaket2.svg);
+    background-size: cover;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 10;
+  } */
+  .consult-map-letter-k {
+    top: 1.5vw;
+    left: 3.8vw;
+  }
+
+  .consult-map-letter-u {
+    top: 1.5vw;
+    right: 1.5vw;
+  }
+
+  .consult-map-letter-d {
+    top: 353vw;
+    left: 1.5vw;
+  }
+
+  .consult-map-letter-a {
+    top: 353vw;
+    right: 1.5vw;
+  }
+
+  .consult-title-block {
+    margin-top: 34vw;
+  }
+
+  .consult-title-block h1 {
+    font-size: 9vw;
+  }
+
+  .consult-title-block p {
+    margin-top: 4vw;
+    font-size: 4vw;
+  }
+
+  .consult-cards {
+    flex-direction: column;
+    gap: 4vw;
+    margin-top: 12vw;
+  }
+
+  .consult-item {
+    width: 100%;
+    height: 67vw;
+    padding: 5vw 5.3vw;
+    border-radius: 4vw;
+  }
+
+  .consult-icon-search {
+    width: 16vw;
+    top: 7.45vw;
+    left: 5.75vw;
+  }
+
+  .consult-icon-compass,
+  .consult-icon-gear {
+    width: 15vw;
+    top: 7.45vw;
+    left: 5.75vw;
+  }
+
+  .consult-icon-money {
+    width: 10vw;
+    top: 7.45vw;
+    left: 5.75vw;
+  }
+
+  .consult-num {
+    top: 4vw;
+    right: 4vw;
+    font-size: 8vw;
+  }
+
+  .consult-text {
+    max-width: 100%;
+  }
+
+  .consult-text h2 {
+    margin: 0 0 3vw;
+    font-size: 5vw;
+  }
+
+  .consult-text p {
+    font-size: 4.5vw;
+    line-height: 1.25;
+  }
+
+  .sign-up {
+    top: 12.5vw;
+    left: 8vw;
+    width: 84vw;
+    height: 14vw;
+    padding: 0;
+    border-radius: 20vw;
+    font-size: 4vw;
+  }
+  .consult-cards br {
+    display: none;
+  }
+  /* события */
+
+  /* body::after {
+    width: 100%;
+    height: 909.5vw;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/eventsMaket.svg);
+    background-size: cover;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 1;
+  } */
+  .events-header {
+    height: 96vw;
+    background-image: url(../images/eventsBackground1.svg);
+  }
+
+  .event-bottom-text {
+    position: absolute;
+    left: 0;
+    bottom: 4vw;
+    width: 100%;
+    padding: 0 1.5vw;
+  }
+
+  .main-text {
+    left: 0;
+    width: 100%;
+    margin: 20vw 0;
+    gap: 4vw;
+  }
+
+  .main-text h1 {
+    font-size: 9vw;
+  }
+
+  .main-text p {
+    font-size: 3.6vw;
+  }
+
+  .events {
+    min-height: 0;
+    background: var(--pink);
+    border-block-width: 0.3vw;
+  }
+
+  .event {
+    display: block;
+    min-height: 0;
+    padding: 8vw 4vw;
+    border-bottom-width: 0.3vw;
+  }
+
+  .event__media {
+    justify-content: flex-start;
+  }
+
+  .event__image {
+    width: 62vw;
+    height: 38vw;
+    border-radius: 3.5vw;
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .event__body {
+    padding: 6vw 0 0;
+  }
+
+  .event__title {
+    max-width: 88vw;
+    color: #000;
+    font-size: 8.4vw;
+  }
+
+  .event__content {
+    max-width: 88vw;
+    max-height: none;
+    margin-top: 4vw;
+    opacity: 1;
+    transform: none;
+  }
+
+  .event__text {
+    font-size: 4.5vw;
+  }
+
+  .event__button {
+    min-width: 67vw;
+    min-height: 14.2vw;
+    margin-top: 5vw;
+    padding: 0 5vw;
+    border-radius: 20vw;
+    font-size: 4.4vw;
+  }
+
+  .event__button--wide {
+    min-width: 78vw;
+  }
+
+  .signup {
+    height: 110vw;
+    padding: 12vw 3.7vw;
+    background-image: url(../images/formBackground.svg);
+  }
+
+  .signup__form {
+    width: 100%;
+    min-height: 0;
+    padding: 6vw;
+    border-radius: 7vw;
+  }
+
+  .signup__title {
+    margin-bottom: 7vw;
+    font-size: 7vw;
+  }
+
+  .signup__row {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    align-items: stretch;
+  }
+
+  .signup__field {
+    gap: 1.5vw;
+  }
+
+  .signup__label {
+    font-size: 3.5vw;
+  }
+
+  .signup__input,
+  .signup__button {
+    height: 13vw;
+    border-radius: 20vw;
+    font-size: 4vw;
+    padding: 0 4vw;
+  }
+
+  .shop-head {
+    height: 96vw;
+    background-image: url(../images/eventsBackground1.svg);
+  }
+  /* body::after {
+    width: 100%;
+    height: 518.8vw;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/adaptiveShopMaket.svg);
+    background-size: cover;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 4;
+  } */
+  .shop-map-letter-k {
+    top: 3vw;
+    left: 4vw;
+  }
+
+  .shop-map-letter-y {
+    top: 3vw;
+    right: 4vw;
+  }
+
+  .shop-map-letter-d {
+    bottom: 4vw;
+    left: 4vw;
+  }
+
+  .shop-map-letter-a {
+    bottom: 3vw;
+    right: 4vw;
+  }
+
+  .shop-title {
+    top: 36vw;
+    width: 100%;
+  }
+
+  .shop-title h1 {
+    font-size: 9vw;
+  }
+
+  .shop-title p {
+    margin-top: 4vw;
+    font-size: 4.6vw;
+  }
+
+  .shop-products {
+    height: auto;
+    flex-direction: column;
+    gap: 9vw;
+    padding: 9vw 4vw 18vw;
+    background-image: url(../images/shopBackground2.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .shop-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3vw;
+  }
+
+  .shop-card {
+    width: 100%;
+    height: 31vw;
+    border-radius: 4vw;
+  }
+
+  .shop-info {
+    width: 100%;
+  }
+
+  .shop-info-title {
+    font-size: 7vw;
+  }
+
+  .shop-info-text {
+    margin-top: 5vw;
+    font-size: 4.4vw;
+    line-height: 1.35;
+  }
+
+  .shop-info-price {
+    margin-top: 6vw;
+    font-size: 6.5vw;
+  }
+
+  .shop-buy {
+    width: 58vw;
+    height: 14vw;
+    margin-top: 7vw;
+    border-radius: 20vw;
+    font-size: 4.5vw;
+  }
+  .footer4 {
+    height: 225vw;
+    background-image: url(../images/adaptiveShopFooterBackground.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .lost-body {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  .lost-page {
+    width: 100%;
+    min-height: 100vh;
+    height: 219.5vw;
+
+    background-image: url('../images/404adaptiveBackground.svg');
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  .lost-glyph {
+    font-size: 11.8vw;
+  }
+
+  .lost-glyph--top-left {
+    top: 4vw;
+    left: 4vw;
+  }
+
+  .lost-glyph--top-right {
+    top: 4vw;
+    right: 4vw;
+  }
+
+  .lost-glyph--bottom-left {
+    bottom: 4vw;
+    left: 4vw;
+  }
+
+  .lost-glyph--bottom-right {
+    bottom: 4vw;
+    right: 4vw;
+  }
+
+  .lost-axis {
+    display: none;
+  }
+
+  .lost-coordinates {
+    top: 75vw;
+    left: 0;
+    width: 100vw;
+    font-size: 8.4vw;
+    line-height: 1.18;
+    letter-spacing: -0.25vw;
+  }
+
+  .lost-title {
+    top: 96vw;
+    font-size: 4.8vw;
+    font-weight: 700;
+  }
+
+  .lost-description {
+    top: 121vw;
+    left: 12vw;
+    bottom: auto;
+    width: 76vw;
+    text-align: center;
+    font-size: 4.2vw;
+    line-height: 1.35;
+  }
+
+  .lost-mail {
+    top: 160vw;
+    right: 0;
+    bottom: auto;
+    width: 100vw;
+    text-align: center;
+    font-size: 4vw;
+  }
+}

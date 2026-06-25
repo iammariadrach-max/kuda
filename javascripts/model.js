@@ -9,13 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
 function initThree() {
   const model = document.querySelector('.canvas')
 
+  if (!model) return
+
+  const isMobile = window.matchMedia('(max-width: 430px)').matches
+
   const scene = new THREE.Scene()
   scene.background = null
 
   RectAreaLightUniformsLib.init()
 
   const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 3000)
-  camera.position.set(0, 3.2, 24)
+
+  if (isMobile) {
+    camera.position.set(0, 3.2, 46)
+  } else {
+    camera.position.set(0, 3.2, 24)
+  }
+
   camera.lookAt(0, 2.6, 0)
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
@@ -30,6 +40,7 @@ function initThree() {
 
   function updateRendererSize() {
     const rect = model.getBoundingClientRect()
+
     renderer.setSize(rect.width, rect.height)
     camera.aspect = rect.width / rect.height
     camera.updateProjectionMatrix()
@@ -40,6 +51,7 @@ function initThree() {
 
   const bagGroup = new THREE.Group()
   scene.add(bagGroup)
+
   const baseRotationY = -1.85
   const baseRotationX = 0.03
 
@@ -71,11 +83,14 @@ function initThree() {
 
       bag.position.sub(center)
 
-      const targetHeight = 17
+      const desktopHeight = 17
+      const mobileHeight = 34
+      const targetHeight = isMobile ? mobileHeight : desktopHeight
+
       const scale = targetHeight / size.y
       bag.scale.setScalar(scale)
 
-      bag.position.y += 1.2
+      bag.position.y += isMobile ? 1.2 : 1.2
 
       bagGroup.add(bag)
 
@@ -88,6 +103,7 @@ function initThree() {
       console.error('Ошибка загрузки модели', error)
     }
   )
+
   scene.add(new THREE.HemisphereLight(0xffffff, 0xd9c6ff, 1))
   scene.add(new THREE.AmbientLight(0xf7f3ff, 0.1))
 
@@ -114,6 +130,7 @@ function initThree() {
 
   function updateMousePosition(event) {
     const rect = renderer.domElement.getBoundingClientRect()
+
     mousePosition.x = ((event.clientX - rect.left) / rect.width) * 2 - 1
     mousePosition.y = -((event.clientY - rect.top) / rect.height) * 2 + 1
   }

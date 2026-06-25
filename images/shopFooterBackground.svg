@@ -11,7 +11,7 @@
 <rect y="112" width="23" height="11" transform="rotate(-90 0 112)" fill="white"/>
 <rect y="750" width="23" height="11" transform="rotate(-90 0 750)" fill="white"/>
 <rect x="76" y="816" width="23" height="11" fill="white"/>
-<rect x="11" width="1420" height="12" fill="#EB8FFC"/>
+<rect x="11" y="-1" width="1420" height="13" fill="#EB8FFC"/>
 <rect x="357" y="816" width="23" height="11" fill="white"/>
 <rect x="1056" y="816" width="23" height="11" fill="white"/>
 <rect x="1340" y="816" width="23" height="11" fill="white"/>

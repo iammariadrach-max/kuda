@@ -24,6 +24,31 @@
     <script defer src="javascripts/scripts.js"></script>
   </head>
   <body>
+    <button
+      class="mobile-menu-toggle"
+      type="button"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="mobile-menu-overlay"></div>
+
+    <aside class="mobile-menu" aria-hidden="true">
+      <button class="mobile-menu-close" type="button" aria-label="Закрыть меню">
+        ×
+      </button>
+
+      <nav class="mobile-menu-nav" aria-label="Мобильное меню">
+        <a href="index.html">О нас</a>
+        <a href="consultation.html">Консультация</a>
+        <a href="events.html">События</a>
+        <a href="shop.html">Магазин</a>
+      </nav>
+    </aside>
     <section class="header">
       <div class="top-text">
         <div class="corner-letter">к</div>
@@ -45,36 +70,7 @@
           <a href="events.html">События</a>
           <a href="shop.html">Магазин</a>
         </nav>
-        <button
-          class="mobile-menu-toggle"
-          type="button"
-          aria-label="Открыть меню"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
 
-        <div class="mobile-menu-overlay"></div>
-
-        <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
-          <button
-            class="mobile-menu-close"
-            type="button"
-            aria-label="Закрыть меню"
-          >
-            ×
-          </button>
-
-          <nav class="mobile-menu-nav" aria-label="Мобильное меню">
-            <a href="index.html">О нас</a>
-            <a href="consultation.html">Консультация</a>
-            <a href="events.html">События</a>
-            <a href="shop.html">Магазин</a>
-          </nav>
-        </aside>
         <div class="corner-letter corner-letter--right">y</div>
       </div>
 
@@ -189,12 +185,12 @@
         <div class="text-about-kuda">
           <h1>
             Мы не используем универсальные сценарии: каждое путешествие
-            создаётся вокруг ваших интересов, ритма, представления о комфорте и
-            желаемого настроения в поездке на каждом этапе маршрута.
+            создаётся вокруг ваших интересов, ритма, представления о комфорте
+            и&nbsp;желаемого настроения в&nbsp;поездке на каждом этапе маршрута.
           </h1>
 
           <h2>
-            Вы рассказываете, как хотите себя чувствовать, а мы подбираем
+            Вы рассказываете, как хотите себя чувствовать, а&nbsp;мы подбираем
             подходящее направление и формат.
           </h2>
 

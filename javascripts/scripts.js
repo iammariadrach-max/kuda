@@ -334,43 +334,49 @@ shopCards.forEach((card) => {
   })
 })
 // меню
-
 document.addEventListener('DOMContentLoaded', () => {
-  const menuButton = document.querySelector('.mobile-menu-toggle')
-  const menu = document.querySelector('.mobile-menu')
-  const overlay = document.querySelector('.mobile-menu-overlay')
-  const closeButton = document.querySelector('.mobile-menu-close')
+  const menuButtons = document.querySelectorAll('.mobile-menu-toggle')
+  const menus = document.querySelectorAll('.mobile-menu')
+  const overlays = document.querySelectorAll('.mobile-menu-overlay')
+  const closeButtons = document.querySelectorAll('.mobile-menu-close')
   const menuLinks = document.querySelectorAll('.mobile-menu-nav a')
 
-  if (!menuButton || !menu || !overlay || !closeButton) return
+  if (!menuButtons.length || !menus.length) return
 
-  function openMenu() {
-    menu.classList.add('is-open')
-    overlay.classList.add('is-open')
-    document.body.classList.add('mobile-menu-lock')
-    menuButton.setAttribute('aria-expanded', 'true')
-    menu.setAttribute('aria-hidden', 'false')
+  function setMenuState(isOpen) {
+    menus.forEach((menu) => {
+      menu.classList.toggle('is-open', isOpen)
+      menu.setAttribute('aria-hidden', String(!isOpen))
+    })
+
+    overlays.forEach((overlay) => {
+      overlay.classList.toggle('is-open', isOpen)
+    })
+
+    menuButtons.forEach((button) => {
+      button.setAttribute('aria-expanded', String(isOpen))
+    })
+
+    document.body.classList.toggle('mobile-menu-lock', isOpen)
   }
 
-  function closeMenu() {
-    menu.classList.remove('is-open')
-    overlay.classList.remove('is-open')
-    document.body.classList.remove('mobile-menu-lock')
-    menuButton.setAttribute('aria-expanded', 'false')
-    menu.setAttribute('aria-hidden', 'true')
-  }
+  menuButtons.forEach((button) => {
+    button.addEventListener('click', () => setMenuState(true))
+  })
 
-  menuButton.addEventListener('click', openMenu)
-  closeButton.addEventListener('click', closeMenu)
-  overlay.addEventListener('click', closeMenu)
+  closeButtons.forEach((button) => {
+    button.addEventListener('click', () => setMenuState(false))
+  })
+
+  overlays.forEach((overlay) => {
+    overlay.addEventListener('click', () => setMenuState(false))
+  })
 
   menuLinks.forEach((link) => {
-    link.addEventListener('click', closeMenu)
+    link.addEventListener('click', () => setMenuState(false))
   })
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      closeMenu()
-    }
+    if (event.key === 'Escape') setMenuState(false)
   })
 })
