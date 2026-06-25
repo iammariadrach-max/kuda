@@ -830,12 +830,9 @@
 
   .lost-page {
     width: 100%;
-    min-height: 100vh;
     height: 219.5vw;
-
     background-image: url('../images/404adaptiveBackground.svg');
-    background-size: contain;
-    background-position: top center;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   .lost-glyph {
@@ -853,12 +850,12 @@
   }
 
   .lost-glyph--bottom-left {
-    bottom: 4vw;
+    bottom: 3vw;
     left: 4vw;
   }
 
   .lost-glyph--bottom-right {
-    bottom: 4vw;
+    bottom: 3vw;
     right: 4vw;
   }
 
@@ -867,7 +864,7 @@
   }
 
   .lost-coordinates {
-    top: 75vw;
+    top: 69vw;
     left: 0;
     width: 100vw;
     font-size: 8.4vw;
@@ -876,13 +873,13 @@
   }
 
   .lost-title {
-    top: 96vw;
+    top: 92vw;
     font-size: 4.8vw;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   .lost-description {
-    top: 121vw;
+    top: 114vw;
     left: 12vw;
     bottom: auto;
     width: 76vw;
@@ -890,9 +887,11 @@
     font-size: 4.2vw;
     line-height: 1.35;
   }
-
+  .lost-description br {
+    display: none;
+  }
   .lost-mail {
-    top: 160vw;
+    top: 140vw;
     right: 0;
     bottom: auto;
     width: 100vw;
